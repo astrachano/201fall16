@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/ola/Dropbox/Duke CSED/201fall16/compsci201_Jotto/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/ola/Dropbox/Duke CSED/201fall16/compsci201_Jotto/gson-2.7.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
