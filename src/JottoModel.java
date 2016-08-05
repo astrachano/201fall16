@@ -52,13 +52,6 @@ public class JottoModel {
     // The list of legal words.
     private ArrayList<String> myWordList;
     
-    /*
-     * TODO: Add any instance variables you need. I recommend storing
-     * the guess you just made, and probably a Random object 
-     * (which generates Random numbers). See PopularityContest.java for
-     * an example of using a Random object. 
-     */
-    
     /**
      * Initialize the model appropriately. This is going to include 
      * initializing myWordList (which is the list of possible words), 
