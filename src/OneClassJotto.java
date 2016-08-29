@@ -31,6 +31,25 @@ public class OneClassJotto {
 	}
 
 	/**
+	 * Reduce universe of possible words by returning a list of those words
+	 * that could be word being guessed. Create a new list that stores just
+	 * those words from universe that have numCommon letters in common with guess
+	 * @param universe is the current list of possible words
+	 * @param guess is the word just guessed
+	 * @param common is number of letters in common between guess and hidden word
+	 * @return new list of strings that could be hidden word
+	 */
+	private ArrayList<String> reduceUniverse(ArrayList<String> universe, String guess, int numCommon) {
+		ArrayList<String> keep = new ArrayList<String>();
+		for(String word : universe) {
+			if (commonCount(word,guess) == numCommon) {
+				keep.add(word);
+			}
+		}
+		return keep;
+	}
+	
+	/**
 	 * Play one game of Jotto where computer guesses the user's word.
 	 */
 	public void playGame() {
@@ -54,15 +73,13 @@ public class OneClassJotto {
 				System.out.println("I guessed the word!");
 				break;
 			}
-			ArrayList<String> keep = new ArrayList<String>();
-			for(String word : possibles) {
-				if (commonCount(word,guess) == common) {
-					keep.add(word);
-				}
-			}
-			possibles = keep;
+
+			// change universe to store just candidate words
+			possibles = reduceUniverse(possibles,guess,common);
 			possibles.remove(guess);
 		}
+		// game over
+		scan.close();
 	}
 
 	/**

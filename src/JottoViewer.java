@@ -197,7 +197,8 @@ public class JottoViewer extends JFrame {
     	String gjson = new Gson().toJson(jots);
         System.out.println("gsjon = "+gjson);
         
-    	//String json = JSONValue.toJSONString(map);
+    	String json = JSONValue.toJSONString(map);
+    	System.out.println("simple json "+json);
     	//String s = myModel.getGuessFromGuesses(json);
     	String s = myModel.getGuessFromGuesses(gjson);
     	
